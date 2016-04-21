@@ -1,0 +1,46 @@
+Script started on Tue 08 Mar 2016 12:24:26 AM EST
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gg[Kcc part3b.tx[K[Kc -o part3b.o
+part3b.c: In function ‘dumb’:
+part3b.c:32:11: warning: assignment makes integer from pointer without a cast [enabled by default]
+      *hold=filename;
+           ^
+part3b.c: In function ‘main’:
+part3b.c:50:7: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ [-Wformat=]
+       printf("\\Length of Input String:%d\\", strlen(string));
+       ^
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gcc part3b.c -o part3b.o[C[1@-[1@w[1@ 
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ ./part3b.o
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7fffffffb3e8
+Value of filename[0]:7fffffffb3f0
+The attack buffer is going to need to be a little bit bigger than:ffff800000004c10
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ ./part3b.ogcc part3b.c -w -o part3b.o[1@-[1@f[1@n[1@o[1@ [1P[1@-[1@s[1@t[1@a[1@c[1@k[1@ [1P[1@-[C[1@p[1@r[1@o[1@t[1@e[1@c[1@t[1@o[1@r[1@ 
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gcc -fno-stack-protector part3b.c -w -o part3b.o./part3b.o[K
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7fffffffb808
+Value of filename[0]:7fffffffb400
+The attack buffer is going to need to be a little bit bigger than:2b50
+Segmentation fault (core dumped)
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ ./part3b.ogcc -fno-stack-protector part3b.c -w -o part3b.o[C[1@-[1@z[1@ [1@e[1@x[1@e[1@c[1@s[1@t[1@a[1@k[1P[1@c[1@k[1@ 
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gcc -fno-stack-protector -z execstack part3b.c -w -o part3b.o./part3b.o[K
+
+
+Error: No Command Line arg for vuln was given
+
+
+Value of Test:7fffffffb808
+Value of filename[0]:7fffffffb400
+The attack buffer is going to need to be a little bit bigger than:2b50
+$ exit
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ exit
+exit
+
+Script done on Tue 08 Mar 2016 12:29:22 AM EST

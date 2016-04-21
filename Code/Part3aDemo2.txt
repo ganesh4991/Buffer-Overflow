@@ -1,0 +1,16 @@
+Script started on Fri 04 Mar 2016 07:13:16 PM EST
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gcc part3a.c -o part3a.o
+part3a.c: In function ‘main’:
+part3a.c:38:3: warning: passing argument 1 of ‘posix_memalign’ from incompatible pointer type [enabled by default]
+   posix_memalign(&buf, pagesize, strlen(shellcode)+10);
+   ^
+In file included from part3a.c:3:0:
+/usr/include/stdlib.h:503:12: note: expected ‘void **’ but argument is of type ‘char **’
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+            ^
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ ./part3a.o 
+Segmentation fault (core dumped)
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ exit
+exit
+
+Script done on Fri 04 Mar 2016 07:13:54 PM EST

@@ -1,0 +1,11 @@
+Script started on Fri 04 Mar 2016 07:15:32 PM EST
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 1iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 1$ as part1.s -o part1.o
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 1iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 1$ ld part1.s[Ko -p[Ko [ar[K[Kp[K[Kpart1
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 1iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 1$ /[K./part1
+$ whoamu i
+iyerg
+$ exit
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 1iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 1$ exit
+exit
+
+Script done on Fri 04 Mar 2016 07:16:16 PM EST

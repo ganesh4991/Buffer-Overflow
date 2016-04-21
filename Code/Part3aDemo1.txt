@@ -1,0 +1,20 @@
+Script started on Fri 04 Mar 2016 07:09:07 PM EST
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ gxx[K[Kcc part3t[Ka.c -o part3a.o
+part3a.c: In function ‘main’:
+part3a.c:38:3: warning: passing argument 1 of ‘posix_memalign’ from incompatible pointer type [enabled by default]
+   posix_memalign(&buf, pagesize, strlen(shellcode)+10);
+   ^
+In file included from part3a.c:3:0:
+/usr/include/stdlib.h:503:12: note: expected ‘void **’ but argument is of type ‘char **’
+ extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+            ^
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ ./part3a.o 
+$ whoam     ls  cd /    cd /
+$ ls
+bin   cdrom  etc   initrd.img	   lib	  lib64   lost+found  mnt  proc  run   srv  tmp  var	  vmlinuz.old
+boot  dev    home  initrd.img.old  lib32  libx32  media       opt  root  sbin  sys  usr  vmlinuz
+$ exit
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 3iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 3$ exit
+exit
+
+Script done on Fri 04 Mar 2016 07:10:00 PM EST

@@ -1,0 +1,6 @@
+Case 1:
+	With stack protection and non-executable stack flags turned on the shellcode does not execute.
+Case 2:
+	-fno-stack-protecter turns off the stack protector. But since the stack is not executable it goes into segmentation fault.
+Case 3:
+	With both stack protection and executable stack turned off the shell opens.

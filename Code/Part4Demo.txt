@@ -1,0 +1,45 @@
+Script started on Tue 08 Mar 2016 12:43:01 AM EST
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ exitgcc -fno-stack-protector -z execstack part4.c -w -o part4.o[C[C[C[C[1P.o[1P.o[1P.o[1P.o[1P.oa.ot.ot.oa.oc.ok.o[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1@a[1@t[1@t[1@a[1@c[1@k
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ gcc -fno-stack-protector -z execstack attack.c -w -o attack.o[1P[1P[1P[1P[1P[1P[1@v[1@u[1@l[1@n[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.o[1P.o[1P.o[1P.o[1P.o[1P.ov.ou.ol.on.o[C[C[K[K
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ ./attack 1048 12032
+
+Using address as guess for beginning of attack buffer: 0xffffafd0
+
+Length of Input String:1046
+
+
+Value of Test:ffffb3e8
+Value of filename[0]:ffffafe0
+
+You are going to need a buffer a little larger than:1032
+
+$ exit
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ ./attack 1048 12032[C[1P 12032[1P 120323 120324 12032
+
+Using address as guess for beginning of attack buffer: 0xffffafd0
+
+Length of Input String:1033
+
+
+Value of Test:ffffb3f8
+Value of filename[0]:ffffaff0
+
+You are going to need a buffer a little larger than:1032
+
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ ./attack 1034 12032[C[1P 12032[1P 120324 120325 12032[1P 12032[1P 120326 12032[1P 120325 120325 12032
+
+Using address as guess for beginning of attack buffer: 0xffffafd0
+
+Length of Input String:1054
+
+
+Value of Test:ffffb3e8
+Value of filename[0]:ffffafe0
+
+You are going to need a buffer a little larger than:1032
+
+Floating point exception (core dumped)
+]0;iyerg@Ganesh: ~/Documents/SecurityLab/BufferOverflow/Part 4iyerg@Ganesh:~/Documents/SecurityLab/BufferOverflow/Part 4$ exit
+exit
+
+Script done on Tue 08 Mar 2016 12:44:23 AM EST
